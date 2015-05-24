@@ -15,7 +15,7 @@ public class NewServerPinger
         ServerAddress serveraddress = ServerAddress.func_78860_a(p_147224_1_.serverIP);
         final NetworkManager networkmanager = NetworkManager.provideLanClient(InetAddress.getByName(serveraddress.getIP()), serveraddress.getPort());
         this.field_147229_c.add(networkmanager);
-        p_147224_1_.serverMOTD = "§e§l加载中...";
+        p_147224_1_.serverMOTD = "§e§l加載中...";
         p_147224_1_.pingToServer = -1L;
         p_147224_1_.field_147412_i = null;
         networkmanager.setNetHandler(new INetHandlerStatusClient()
@@ -29,11 +29,11 @@ public class NewServerPinger
                 if (serverstatusresponse.func_151317_a() != null)
                 {
                     //p_147224_1_.serverMOTD = serverstatusresponse.func_151317_a().getFormattedText();
-                	p_147224_1_.serverMOTD = "§a§l在线";
+                	p_147224_1_.serverMOTD = "§a§l在線";
                 }
                 else
                 {
-                    p_147224_1_.serverMOTD = "§4§l关闭";
+                    p_147224_1_.serverMOTD = "§4§l關閉";
                 }
 
                 if (serverstatusresponse.func_151322_c() != null)
@@ -129,7 +129,7 @@ public class NewServerPinger
                 {
                     NewServerPinger.logger.error("Can\'t ping " + p_147224_1_.serverIP + ": " + p_147231_1_.getUnformattedText());
                     //p_147224_1_.serverMOTD = EnumChatFormatting.DARK_RED + "Can\'t connect to server.";
-                    p_147224_1_.serverMOTD = "§4§l关闭";
+                    p_147224_1_.serverMOTD = "§4§l關閉";
                     p_147224_1_.populationInfo = "";
                     NewMenu.onlineplayer = "§4§l0";
                     NewMenu.maxplayer = "§4§l0";
